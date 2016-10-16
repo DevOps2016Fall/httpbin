@@ -468,13 +468,13 @@ class HttpbinTestCase(unittest.TestCase):
         response = self.app.get(path='/deny')
         self.assertEqual(response.status_code, 200)
     def test_links(self):
-        response = self.app.get(path='/links/135')
+        response = self.app.get(path='/links/1360')
         self.assertEqual(response.status_code, 200)
     def test_set_cookie(self):
         response = self.app.get(path='/cookies/set/<name>/<value>')
         self.assertEqual(response.status_code, 200)
     def test_redirect_n_times(self):
-        response = self.app.get(path='/redirect/1803')
+        response = self.app.get(path='/redirect/493')
         self.assertEqual(response.status_code, 200)
     def test_image(self):
         response = self.app.get(path='/image')
@@ -489,7 +489,7 @@ class HttpbinTestCase(unittest.TestCase):
         response = self.app.get(path='/image/jpeg')
         self.assertEqual(response.status_code, 200)
     def test_absolute_redirect_n_times(self):
-        response = self.app.get(path='/absolute-redirect/1616')
+        response = self.app.get(path='/absolute-redirect/640')
         self.assertEqual(response.status_code, 200)
     def test_view_status_code(self):
         response = self.app.get(path='/status/<codes>')
@@ -498,7 +498,7 @@ class HttpbinTestCase(unittest.TestCase):
         response = self.app.get(path='/get')
         self.assertEqual(response.status_code, 200)
     def test_stream_n_messages(self):
-        response = self.app.get(path='/stream/1192')
+        response = self.app.get(path='/stream/182')
         self.assertEqual(response.status_code, 200)
     def test_view_patch(self):
         response = self.app.get(path='/patch')
@@ -528,16 +528,16 @@ class HttpbinTestCase(unittest.TestCase):
         response = self.app.get(path='/post')
         self.assertEqual(response.status_code, 200)
     def test_stream_random_bytes(self):
-        response = self.app.get(path='/stream-bytes/1533')
+        response = self.app.get(path='/stream-bytes/1249')
         self.assertEqual(response.status_code, 200)
     def test_cache_control(self):
-        response = self.app.get(path='/cache/749')
+        response = self.app.get(path='/cache/1166')
         self.assertEqual(response.status_code, 200)
     def test_view_user_agent(self):
         response = self.app.get(path='/user-agent')
         self.assertEqual(response.status_code, 200)
     def test_link_page(self):
-        response = self.app.get(path='/links/391/1628')
+        response = self.app.get(path='/links/818/1116')
         self.assertEqual(response.status_code, 200)
     def test_response_headers(self):
         response = self.app.get(path='/response-headers')
@@ -546,13 +546,13 @@ class HttpbinTestCase(unittest.TestCase):
         response = self.app.get(path='/cookies/delete')
         self.assertEqual(response.status_code, 200)
     def test_relative_redirect_n_times(self):
-        response = self.app.get(path='/relative-redirect/955')
+        response = self.app.get(path='/relative-redirect/1218')
         self.assertEqual(response.status_code, 200)
     def test_range_request(self):
-        response = self.app.get(path='/range/978')
+        response = self.app.get(path='/range/589')
         self.assertEqual(response.status_code, 200)
     def test_random_bytes(self):
-        response = self.app.get(path='/bytes/961')
+        response = self.app.get(path='/bytes/1385')
         self.assertEqual(response.status_code, 200)
     def test_image_webp(self):
         response = self.app.get(path='/image/webp')
