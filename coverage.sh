@@ -3,7 +3,7 @@ while read line
 do
     temp=$line
     t=${temp:1:5}
-    error=5
+    error=0
     if [ "$t" == "error" ];then
         if [  "${temp:13:2}" -gt "$error" ]; then
           echo "Static analysis errors violation is higher than " $error "."
