@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="2" errors="1" failures="0" skip="0"><testcase classname="nose.failure.Failure" name="runTest" time="0.000"><error type="exceptions.NameError" message="name 'tmpl_dir' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/Users/WeiFu/miniconda2/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/Users/WeiFu/miniconda2/lib/python2.7/site-packages/nose/loader.py", line 413, in loadTestsFromName
+    addr.filename, addr.module)
+  File "/Users/WeiFu/miniconda2/lib/python2.7/site-packages/nose/importer.py", line 47, in importFromPath
+    return self.importFromDir(dir_path, fqname)
+  File "/Users/WeiFu/miniconda2/lib/python2.7/site-packages/nose/importer.py", line 94, in importFromDir
+    mod = load_module(part_fqname, fh, filename, desc)
+  File "/Users/WeiFu/Github/Class/DevOp/DevOps2016Fall_pub_Orgnization/httpbin/fake_core.py", line 32, in <module>
+    app = Flask(__name__, template_folder=tmpl_dir)
+NameError: name 'tmpl_dir' is not defined
+]]></error></testcase><testcase classname="test_generator" name="generate_test_cases" time="0.002"><system-out><![CDATA[{}
+]]></system-out></testcase></testsuite>

@@ -9,7 +9,7 @@ import json
 from werkzeug.http import parse_dict_header
 from hashlib import md5
 from six import BytesIO
-
+import pdb
 import httpbin
 
 
@@ -227,6 +227,7 @@ class HttpbinTestCase(unittest.TestCase):
 
     def test_drip(self):
         response = self.app.get('/drip?numbytes=400&duration=2&delay=1')
+        pdb.set_trace()
         self.assertEqual(response.content_length, 400)
         self.assertEqual(len(response.get_data()), 400)
         self.assertEqual(response.status_code, 200)
@@ -461,6 +462,7 @@ class HttpbinTestCase(unittest.TestCase):
         data = response.data.decode('utf-8')
         self.assertIn('google-analytics', data)
         self.assertIn('perfectaudience', data)
+
 
 
 if __name__ == '__main__':
