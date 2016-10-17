@@ -16,11 +16,11 @@ def parse(file_name="fake_core.py"):
   with open(file_name) as f:
     file_contents = f.read()
     print(count_loc(file_contents.split("\n")))
-    pdb.set_trace()
   tree = ast.parse(file_contents)
   FuncLister().visit(tree)
   print(max_condition)
   print(long_methods)
+  generate_test_cases()
 
 
 def generate_test_cases():
@@ -87,7 +87,6 @@ class FuncLister(ast.NodeVisitor):
           continue
         if one.func.value.id == "app" and one.func.attr == "route":
           constraints[node.name] = one.args[0].s
-    pdb.set_trace()
     max_condition[node.name] = self.calculate_max_condition(node)
     long_methods[node.name] = node.body[-1].lineno - node.lineno + 1
     self.generic_visit(node)
