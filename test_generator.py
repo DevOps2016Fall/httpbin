@@ -37,11 +37,14 @@ def function_name(func_dict):
   space2 = '    '
   contents = ''
   for name, value in func_dict.iteritems():
-    contents += space2 + 'def test_' + name + '(self):\n'
     value_list = value.split("/")
+    if len(value_list)>2 or value_list[-1] in ["put","get","post","patch",
+                                               "","delete","redirect-to"]:
+      continue
+    contents += space2 + 'def test_' + name + '(self):\n'
     params = ""
     for one in value_list:
-      if "int" in one:
+      if "<" in one:
         params += "/" + str(int(2000 * random.random()))
       elif one:
         params += "/" + one

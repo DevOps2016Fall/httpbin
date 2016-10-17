@@ -467,47 +467,11 @@ class HttpbinTestCase(unittest.TestCase):
     def test_view_deny_page(self):
         response = self.app.get(path='/deny')
         self.assertEqual(response.status_code, 200)
-    def test_links(self):
-        response = self.app.get(path='/links/1360')
-        self.assertEqual(response.status_code, 200)
-    def test_set_cookie(self):
-        response = self.app.get(path='/cookies/set/<name>/<value>')
-        self.assertEqual(response.status_code, 200)
-    def test_redirect_n_times(self):
-        response = self.app.get(path='/redirect/493')
-        self.assertEqual(response.status_code, 200)
     def test_image(self):
         response = self.app.get(path='/image')
         self.assertEqual(response.status_code, 200)
-    def test_basic_auth(self):
-        response = self.app.get(path='/basic-auth/<user>/<passwd>')
-        self.assertEqual(response.status_code, 200)
     def test_view_html_page(self):
         response = self.app.get(path='/html')
-        self.assertEqual(response.status_code, 200)
-    def test_image_jpeg(self):
-        response = self.app.get(path='/image/jpeg')
-        self.assertEqual(response.status_code, 200)
-    def test_absolute_redirect_n_times(self):
-        response = self.app.get(path='/absolute-redirect/640')
-        self.assertEqual(response.status_code, 200)
-    def test_view_status_code(self):
-        response = self.app.get(path='/status/<codes>')
-        self.assertEqual(response.status_code, 200)
-    def test_view_get(self):
-        response = self.app.get(path='/get')
-        self.assertEqual(response.status_code, 200)
-    def test_stream_n_messages(self):
-        response = self.app.get(path='/stream/182')
-        self.assertEqual(response.status_code, 200)
-    def test_view_patch(self):
-        response = self.app.get(path='/patch')
-        self.assertEqual(response.status_code, 200)
-    def test_digest_auth(self):
-        response = self.app.get(path='/digest-auth/<qop>/<user>/<passwd>/<algorithm>')
-        self.assertEqual(response.status_code, 200)
-    def test_set_cookies(self):
-        response = self.app.get(path='/cookies/set')
         self.assertEqual(response.status_code, 200)
     def test_xml(self):
         response = self.app.get(path='/xml')
@@ -524,50 +488,14 @@ class HttpbinTestCase(unittest.TestCase):
     def test_cache(self):
         response = self.app.get(path='/cache')
         self.assertEqual(response.status_code, 200)
-    def test_view_post(self):
-        response = self.app.get(path='/post')
-        self.assertEqual(response.status_code, 200)
-    def test_stream_random_bytes(self):
-        response = self.app.get(path='/stream-bytes/1249')
-        self.assertEqual(response.status_code, 200)
-    def test_cache_control(self):
-        response = self.app.get(path='/cache/1166')
-        self.assertEqual(response.status_code, 200)
     def test_view_user_agent(self):
         response = self.app.get(path='/user-agent')
-        self.assertEqual(response.status_code, 200)
-    def test_link_page(self):
-        response = self.app.get(path='/links/818/1116')
         self.assertEqual(response.status_code, 200)
     def test_response_headers(self):
         response = self.app.get(path='/response-headers')
         self.assertEqual(response.status_code, 200)
-    def test_delete_cookies(self):
-        response = self.app.get(path='/cookies/delete')
-        self.assertEqual(response.status_code, 200)
-    def test_relative_redirect_n_times(self):
-        response = self.app.get(path='/relative-redirect/1218')
-        self.assertEqual(response.status_code, 200)
-    def test_range_request(self):
-        response = self.app.get(path='/range/589')
-        self.assertEqual(response.status_code, 200)
-    def test_random_bytes(self):
-        response = self.app.get(path='/bytes/1385')
-        self.assertEqual(response.status_code, 200)
-    def test_image_webp(self):
-        response = self.app.get(path='/image/webp')
-        self.assertEqual(response.status_code, 200)
-    def test_view_put(self):
-        response = self.app.get(path='/put')
-        self.assertEqual(response.status_code, 200)
     def test_view_cookies(self):
         response = self.app.get(path='/cookies')
-        self.assertEqual(response.status_code, 200)
-    def test_delay_response(self):
-        response = self.app.get(path='/delay/<delay>')
-        self.assertEqual(response.status_code, 200)
-    def test_view_delete(self):
-        response = self.app.get(path='/delete')
         self.assertEqual(response.status_code, 200)
     def test_view_gzip_encoded_content(self):
         response = self.app.get(path='/gzip')
@@ -575,35 +503,8 @@ class HttpbinTestCase(unittest.TestCase):
     def test_view_origin(self):
         response = self.app.get(path='/ip')
         self.assertEqual(response.status_code, 200)
-    def test_hidden_basic_auth(self):
-        response = self.app.get(path='/hidden-basic-auth/<user>/<passwd>')
-        self.assertEqual(response.status_code, 200)
-    def test_image_svg(self):
-        response = self.app.get(path='/image/svg')
-        self.assertEqual(response.status_code, 200)
-    def test_redirect_to(self):
-        response = self.app.get(path='/redirect-to')
-        self.assertEqual(response.status_code, 200)
     def test_drip(self):
         response = self.app.get(path='/drip')
-        self.assertEqual(response.status_code, 200)
-    def test_encoding(self):
-        response = self.app.get(path='/encoding/utf8')
-        self.assertEqual(response.status_code, 200)
-    def test_digest_auth_md5(self):
-        response = self.app.get(path='/digest-auth/<qop>/<user>/<passwd>')
-        self.assertEqual(response.status_code, 200)
-    def test_view_landing_page(self):
-        response = self.app.get(path='')
-        self.assertEqual(response.status_code, 200)
-    def test_view_forms_post(self):
-        response = self.app.get(path='/forms/post')
-        self.assertEqual(response.status_code, 200)
-    def test_image_png(self):
-        response = self.app.get(path='/image/png')
-        self.assertEqual(response.status_code, 200)
-    def test_decode_base64(self):
-        response = self.app.get(path='/base64/<value>')
         self.assertEqual(response.status_code, 200)
 if __name__ == '__main__':
     unittest.main()
