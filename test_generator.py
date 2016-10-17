@@ -5,15 +5,6 @@ import pdb
 import random
 from httpbin import core
 
-# file_to_parse = "saws.py"
-# with open(file_to_parse) as fd:
-#   file_contents = fd.read()
-#
-# module = ast.parse(file_contents)
-# class_definitions = [node for node in module.body if
-#                      isinstance(node, ast.ClassDef)]
-# function_definitions = [node for node in class_definitions[0].body if
-#                         isinstance(node, ast.FunctionDef)]
 constraints = {}
 max_condition = {}
 long_methods = {}
@@ -121,18 +112,6 @@ class FuncLister(ast.NodeVisitor):
 
 
 
-
-
-
-
-      # def visit_If(self, node):
-      #   pdb.set_trace()
-      #   if hasattr(node.test,"values"):
-      #     print("max_conditions",len(node.test.values))
-      #   else:
-      #     print("max_conditions",1)
-      #
-      #   self.generic_visit(node)
 
 
 if __name__ == "__main__":
