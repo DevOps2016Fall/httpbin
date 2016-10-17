@@ -16,6 +16,7 @@ from httpbin import core
 #                         isinstance(node, ast.FunctionDef)]
 constraints = {}
 max_condition = {}
+long_methods = {}
 
 
 def parse(file_name="fake_core.py"):
@@ -23,9 +24,12 @@ def parse(file_name="fake_core.py"):
     raise ValueError("file '{0}' {1}".format(file_name, "doesn't exist"))
   with open(file_name) as f:
     file_contents = f.read()
+    print(count_loc(file_contents.split("\n")))
+    pdb.set_trace()
   tree = ast.parse(file_contents)
   FuncLister().visit(tree)
   print(max_condition)
+  print(long_methods)
 
 
 def generate_test_cases():
@@ -35,6 +39,30 @@ def generate_test_cases():
     contents += function_name(constraints)
     contents += "if __name__ == '__main__':\n    unittest.main()"
   open("auto_test_suites.py", "w").write(contents)
+
+def count_loc(lines):
+  nb_lines  = 0
+  docstring = False
+  for line in lines:
+      line = line.strip()
+
+      if line == "" \
+         or line.startswith("#") \
+         or docstring and not (line.startswith('"""') or line.startswith("'''"))\
+         or (line.startswith("'''") and line.endswith("'''") and len(line) >3)  \
+         or (line.startswith('"""') and line.endswith('"""') and len(line) >3) :
+          continue
+
+      # this is either a starting or ending docstring
+      elif line.startswith('"""') or line.startswith("'''"):
+          docstring = not docstring
+          continue
+
+      else:
+          nb_lines += 1
+
+  return nb_lines*1.0/len(lines)
+
 
 
 def function_name(func_dict):
@@ -70,6 +98,7 @@ class FuncLister(ast.NodeVisitor):
         if one.func.value.id == "app" and one.func.attr == "route":
           constraints[node.name] = one.args[0].s
     max_condition[node.name] = self.calculate_max_condition(node)
+    long_methods[node.name] = node.body[-1].lineno-node.lineno +1
     self.generic_visit(node)
 
   def calculate_max_condition(self, node):
@@ -90,6 +119,7 @@ class FuncLister(ast.NodeVisitor):
       return True
     else:
       return False
+
 
 
 
