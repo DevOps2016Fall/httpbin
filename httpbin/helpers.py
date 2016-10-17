@@ -16,7 +16,7 @@ from flask import request, make_response
 from six.moves.urllib.parse import urlparse, urlunparse
 
 
-from .structures import CaseInsensitiveDict
+from structures import CaseInsensitiveDict
 
 
 ASCII_ART = """
