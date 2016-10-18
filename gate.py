@@ -29,4 +29,5 @@ with open("coverage.xml", "r") as f:
         subprocess.check_call(["echo","Commit Failed!!!"])
         exit(1)
 print("Average code coverage checking passed!")
+exit(0)
 
