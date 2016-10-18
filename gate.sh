@@ -28,7 +28,7 @@ while read line
 do
     temp=$line
     t=${temp:26:9}
-    coverage=0.70 # code coverage
+    coverage=0.60 # code coverage
     if [ "$t" == "line-rate" ]; then
 #        if (( $(echo "$num1 > $num2" |bc -l) ))
           if (($(echo "${temp:37:5} < $coverage"|bc -l ))); then
