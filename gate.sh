@@ -12,7 +12,7 @@ do
         fi
     fi
     conventions=${temp:1:10}
-    conv=10
+    conv=200 # counts of conventions
     if [ "$conventions" == "convention" ];then
        if [  "${temp:13:3}" -gt "$conv" ]; then
           echo "Static analysis convetion violation is higher than " $conv "."
@@ -28,7 +28,7 @@ while read line
 do
     temp=$line
     t=${temp:26:9}
-    coverage=0.70
+    coverage=0.70 # code coverage
     if [ "$t" == "line-rate" ]; then
 #        if (( $(echo "$num1 > $num2" |bc -l) ))
           if (($(echo "${temp:37:5} < $coverage"|bc -l ))); then
