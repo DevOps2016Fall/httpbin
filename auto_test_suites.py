@@ -464,6 +464,5 @@ class HttpbinTestCase(unittest.TestCase):
         self.assertIn('perfectaudience', data)
 
 
-
 if __name__ == '__main__':
     unittest.main()
