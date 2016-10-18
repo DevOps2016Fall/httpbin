@@ -464,47 +464,5 @@ class HttpbinTestCase(unittest.TestCase):
         self.assertIn('perfectaudience', data)
 
 
-    def test_view_deny_page(self):
-        response = self.app.get(path='/deny')
-        self.assertEqual(response.status_code, 200)
-    def test_image(self):
-        response = self.app.get(path='/image')
-        self.assertEqual(response.status_code, 200)
-    def test_view_html_page(self):
-        response = self.app.get(path='/html')
-        self.assertEqual(response.status_code, 200)
-    def test_xml(self):
-        response = self.app.get(path='/xml')
-        self.assertEqual(response.status_code, 200)
-    def test_view_robots_page(self):
-        response = self.app.get(path='/robots.txt')
-        self.assertEqual(response.status_code, 200)
-    def test_view_headers(self):
-        response = self.app.get(path='/headers')
-        self.assertEqual(response.status_code, 200)
-    def test_view_deflate_encoded_content(self):
-        response = self.app.get(path='/deflate')
-        self.assertEqual(response.status_code, 200)
-    def test_cache(self):
-        response = self.app.get(path='/cache')
-        self.assertEqual(response.status_code, 200)
-    def test_view_user_agent(self):
-        response = self.app.get(path='/user-agent')
-        self.assertEqual(response.status_code, 200)
-    def test_response_headers(self):
-        response = self.app.get(path='/response-headers')
-        self.assertEqual(response.status_code, 200)
-    def test_view_cookies(self):
-        response = self.app.get(path='/cookies')
-        self.assertEqual(response.status_code, 200)
-    def test_view_gzip_encoded_content(self):
-        response = self.app.get(path='/gzip')
-        self.assertEqual(response.status_code, 200)
-    def test_view_origin(self):
-        response = self.app.get(path='/ip')
-        self.assertEqual(response.status_code, 200)
-    def test_drip(self):
-        response = self.app.get(path='/drip')
-        self.assertEqual(response.status_code, 200)
 if __name__ == '__main__':
     unittest.main()
