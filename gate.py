@@ -3,7 +3,7 @@ import pdb
 import subprocess
 
 conv = 200
-coverage = 0.9
+coverage = 0.7
 with open("pylint.out", "r")as f:
   for line in f.readlines():
     if line[1:11] == "convention":
