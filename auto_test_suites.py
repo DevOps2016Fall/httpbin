@@ -462,7 +462,5 @@ class HttpbinTestCase(unittest.TestCase):
         data = response.data.decode('utf-8')
         self.assertIn('google-analytics', data)
         self.assertIn('perfectaudience', data)
-
-
 if __name__ == '__main__':
     unittest.main()
