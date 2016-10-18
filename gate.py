@@ -17,7 +17,7 @@ with open("pylint.out", "r")as f:
         # # print("Static analysis convetion violation is higher than ", conv, ".")
         # print("Commit Failed!")
         # exit(1)
-print("Static analysis convetion violation checking passed!")
+# print("Static analysis convetion violation checking passed!")
 
 with open("coverage.xml", "r") as f:
   for line in f.readlines():
@@ -28,6 +28,6 @@ with open("coverage.xml", "r") as f:
         subprocess.call(["echo", x])
         subprocess.check_call(["echo","Commit Failed!!!"])
         exit(1)
-print("Average code coverage checking passed!")
-exit(0)
+# print("Average code coverage checking passed!")
+subprocess.call("exit 0", shell=True)
 
