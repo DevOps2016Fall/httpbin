@@ -3,7 +3,7 @@ while read line
 do
     temp=$line
     t=${temp:1:5}
-    error=0
+    error=10
     if [ "$t" == "error" ];then
         if [  "${temp:13:2}" -gt "$error" ]; then
           echo "Static analysis errors violation is higher than " $error "."
@@ -23,19 +23,18 @@ do
 done < pylint.out
 
 
-#
-#while read line
-#do
-#    temp=$line
-#    t=${temp:26:9}
-#    coverage=75
-#    if [ "$t" == "line-rate" ]; then
-#        x=${temp:37:5}
-#        echo $x*1000 |bc
-#        if [ "${temp:37:5}*1000|" -lt "$coverage" ]; then
-#        echo "Average code coverate is less than " $coverage "."
-#        echo "Commit Failed!"
-#        exit 1
-#        fi
-#    fi
-#done < coverage.xml
+
+while read line
+do
+    temp=$line
+    t=${temp:26:9}
+    coverage=0.70
+    if [ "$t" == "line-rate" ]; then
+#        if (( $(echo "$num1 > $num2" |bc -l) ))
+          if (($(echo "${temp:37:5} < $coverage"|bc -l ))); then
+          echo "Average code coverate is less than " $coverage "."
+          echo "Commit Failed!"
+          exit 1
+        fi
+    fi
+done < coverage.xml
