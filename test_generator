@@ -29,7 +29,7 @@ def generate_test_cases():
     contents = "".join(f.readlines())
     contents += function_name(constraints)
     contents += "if __name__ == '__main__':\n    unittest.main()"
-  open("auto_test_suites.py", "w").write(contents)
+  open("auto_test_suites", "w").write(contents)
 
 
 def count_loc(lines):

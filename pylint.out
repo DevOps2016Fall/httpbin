@@ -1,0 +1,315 @@
+************* Module R0801
+F:  1, 0: No module named R0801 (fatal)
+************* Module httpbin
+W:  3, 0: Redefining built-in 'xrange' (redefined-builtin)
+C:  1, 0: Missing module docstring (missing-docstring)
+W:  3, 0: Wildcard import core (wildcard-import)
+************* Module httpbin.core
+C: 18, 0: Line too long (119/100) (line-too-long)
+C: 87, 0: Line too long (112/100) (line-too-long)
+C:438, 0: Exactly one space required after comma
+            getattr(request,'remote_addr',u'').encode('ascii'),
+                           ^ (bad-whitespace)
+C:438, 0: Exactly one space required after comma
+            getattr(request,'remote_addr',u'').encode('ascii'),
+                                         ^ (bad-whitespace)
+C:471, 0: Exactly one space required after comma
+    numbytes = min(int(args.get('numbytes', 10)),(10 * 1024 * 1024)) # set 10MB limit
+                                                ^ (bad-whitespace)
+C:502, 0: Line too long (120/100) (line-too-long)
+C:503, 0: Line too long (101/100) (line-too-long)
+C:564, 0: Unnecessary parens after u'yield' keyword (superfluous-parens)
+C:568, 0: Unnecessary parens after u'yield' keyword (superfluous-parens)
+C:599, 0: Line too long (127/100) (line-too-long)
+C:617, 0: Unnecessary parens after u'yield' keyword (superfluous-parens)
+C:623, 0: Unnecessary parens after u'yield' keyword (superfluous-parens)
+C:630, 0: No space allowed before bracket
+        'Content-Range' : content_range }
+                                        ^ (bad-whitespace)
+W: 22, 0: Redefining built-in 'xrange' (redefined-builtin)
+F: 18, 0: Unable to import 'flask' (import-error)
+F: 19, 0: Unable to import 'werkzeug.datastructures' (import-error)
+F: 20, 0: Unable to import 'werkzeug.http' (import-error)
+F: 21, 0: Unable to import 'werkzeug.wrappers' (import-error)
+W: 25, 0: Relative import 'helpers', should be 'httpbin.helpers' (relative-import)
+W: 27, 0: Relative import 'utils', should be 'httpbin.utils' (relative-import)
+W: 28, 0: Relative import 'structures', should be 'httpbin.structures' (relative-import)
+W: 42, 0: Redefining name 'args' from outer scope (line 729) (redefined-outer-name)
+C: 42, 0: Missing function docstring (missing-docstring)
+C: 52, 0: Invalid constant name "tmpl_dir" (invalid-name)
+C: 54, 0: Invalid constant name "app" (invalid-name)
+W: 70, 4: No exception type(s) specified (bare-except)
+F: 62, 8: Unable to import 'bugsnag' (import-error)
+F: 63, 8: Unable to import 'bugsnag.flask' (import-error)
+C: 64, 8: Invalid constant name "release_stage" (invalid-name)
+C: 77, 0: Missing function docstring (missing-docstring)
+C:210, 0: Invalid argument name "n" (invalid-name)
+C:225, 0: Invalid argument name "n" (invalid-name)
+C:225, 0: Missing function docstring (missing-docstring)
+W:241, 8: Redefining name 'status_code' from outer scope (line 25) (redefined-outer-name)
+W:233, 4: Redefining name 'args' from outer scope (line 729) (redefined-outer-name)
+C:250, 0: Invalid argument name "n" (invalid-name)
+C:267, 0: Invalid argument name "n" (invalid-name)
+C:279, 0: Invalid argument name "n" (invalid-name)
+C:284, 4: Missing function docstring (missing-docstring)
+C:325, 8: Invalid variable name "d" (invalid-name)
+C:367, 4: Invalid variable name "r" (invalid-name)
+C:378, 4: Invalid variable name "r" (invalid-name)
+C:390, 4: Invalid variable name "r" (invalid-name)
+W:391,13: Unused variable 'value' (unused-variable)
+C:417, 0: Missing function docstring (missing-docstring)
+W:469, 4: Redefining name 'args' from outer scope (line 729) (redefined-outer-name)
+C:479, 4: Missing function docstring (missing-docstring)
+W:480,12: Unused variable 'i' (unused-variable)
+C:523, 0: Missing function docstring (missing-docstring)
+C:528, 0: Invalid argument name "n" (invalid-name)
+C:545, 0: Invalid argument name "n" (invalid-name)
+C:558, 4: Missing function docstring (missing-docstring)
+W:561,12: Unused variable 'i' (unused-variable)
+W:626, 4: Redefining name 'response_headers' from outer scope (line 318) (redefined-outer-name)
+C:608, 4: Missing function docstring (missing-docstring)
+C:642, 0: Invalid argument name "n" (invalid-name)
+C:660, 0: Invalid argument name "n" (invalid-name)
+C:688, 0: Missing function docstring (missing-docstring)
+C:694, 0: Missing function docstring (missing-docstring)
+C:700, 0: Missing function docstring (missing-docstring)
+C:706, 0: Missing function docstring (missing-docstring)
+C:711, 0: Missing function docstring (missing-docstring)
+C:719, 0: Missing function docstring (missing-docstring)
+C:726, 4: Invalid constant name "parser" (invalid-name)
+C:729, 4: Invalid constant name "args" (invalid-name)
+W: 29, 0: Unused import pdb (unused-import)
+************* Module httpbin.filters
+F: 18, 0: Unable to import 'flask' (import-error)
+C: 21, 0: Invalid constant name "app" (invalid-name)
+C: 25, 0: Invalid argument name "f" (invalid-name)
+C: 29, 4: Invalid variable name "r" (invalid-name)
+C: 37, 0: Invalid argument name "f" (invalid-name)
+C: 69, 0: Invalid argument name "f" (invalid-name)
+************* Module httpbin.helpers
+C: 65, 0: Exactly one space required after assignment
+ANGRY_ASCII ="""
+            ^ (bad-whitespace)
+C:155, 0: Line too long (102/100) (line-too-long)
+C:220, 0: Wrong hanging indentation.
+                'message': 'Client did not request a supported media type.',
+            |   ^ (bad-continuation)
+C:221, 0: Wrong hanging indentation.
+                'accept': ACCEPTED_MEDIA_TYPES
+            |   ^ (bad-continuation)
+C:223, 0: Wrong continued indentation.
+            headers={
+            ^     | (bad-continuation)
+C:277, 0: Wrong continued indentation.
+                           realm.encode('utf-8'),
+                        |  ^ (bad-continuation)
+C:278, 0: Wrong continued indentation.
+                           password.encode('utf-8')]), algorithm)
+                        |  ^ (bad-continuation)
+C:290, 0: Line too long (107/100) (line-too-long)
+C:325, 0: Trailing whitespace (trailing-whitespace)
+C:334, 0: Wrong continued indentation.
+                               credentails.get('nonce').encode('utf-8'),
+                               ^| (bad-continuation)
+C:335, 0: Wrong continued indentation.
+                               credentails.get('nc').encode('utf-8'),
+                               ^| (bad-continuation)
+C:336, 0: Wrong continued indentation.
+                               credentails.get('cnonce').encode('utf-8'),
+                               ^| (bad-continuation)
+C:337, 0: Wrong continued indentation.
+                               credentails.get('qop').encode('utf-8'),
+                               ^| (bad-continuation)
+C:338, 0: Wrong continued indentation.
+                               HA2_value.encode('utf-8')]), algorithm)
+                               ^| (bad-continuation)
+W: 22, 0: Anomalous backslash in string: '\_'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+W: 22, 0: Anomalous backslash in string: '\_'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+W: 65, 0: Anomalous backslash in string: '\ '. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+F: 13, 0: Unable to import 'werkzeug.http' (import-error)
+F: 15, 0: Unable to import 'flask' (import-error)
+F: 16, 0: Unable to import 'six.moves.urllib.parse' (import-error)
+W: 19, 0: Relative import 'structures', should be 'httpbin.structures' (relative-import)
+C:108,11: Invalid variable name "v" (invalid-name)
+C:142,15: Invalid variable name "v" (invalid-name)
+W:149,12: Redefining name 'request' from outer scope (line 15) (redefined-outer-name)
+W:170,15: Used builtin function 'map' (bad-builtin)
+C:179, 4: Invalid variable name "d" (invalid-name)
+C:236, 4: Invalid variable name "r" (invalid-name)
+C:241, 8: Invalid variable name "m" (invalid-name)
+C:262, 0: Invalid function name "H" (invalid-name)
+C:262, 0: Missing function docstring (missing-docstring)
+C:269, 0: Invalid function name "HA1" (invalid-name)
+W:281,21: Redefining name 'request' from outer scope (line 15) (redefined-outer-name)
+C:281, 0: Invalid function name "HA2" (invalid-name)
+E:297,31: No value for argument 'algorithm' in function call (no-value-for-parameter)
+W:301,36: Redefining name 'request' from outer scope (line 15) (redefined-outer-name)
+W:314, 4: Redefining name 'response' from outer scope (line 301) (redefined-outer-name)
+C:316, 4: Invalid variable name "HA1_value" (invalid-name)
+C:322, 4: Invalid variable name "HA2_value" (invalid-name)
+W:345,22: Unused argument 'user' (unused-argument)
+W:392, 4: No exception type(s) specified (bare-except)
+W:397, 4: No exception type(s) specified (bare-except)
+C:402, 0: Missing function docstring (missing-docstring)
+************* Module httpbin.structures
+C: 18, 4: Missing method docstring (missing-docstring)
+************* Module httpbin.utils
+C: 25, 8: Invalid variable name "w" (invalid-name)
+C: 28, 4: Invalid variable name "x" (invalid-name)
+
+
+Report
+======
+585 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |6      |6          |=          |83.33       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |1      |1          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |3      |3          |=          |66.67       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |75     |75         |=          |77.33       |4.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    decorator (httpbin.filters)
+    httpbin 
+      \-filters (httpbin.core)
+      \-helpers (httpbin.core)
+      \-structures (httpbin.helpers,httpbin.core)
+    six (httpbin.filters,httpbin.core)
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |749    |68.34 |749      |=          |
++----------+-------+------+---------+-----------+
+|docstring |203    |18.52 |203      |=          |
++----------+-------+------+---------+-----------+
+|comment   |31     |2.83  |31       |=          |
++----------+-------+------+---------+-----------+
+|empty     |113    |10.31 |113      |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |81     |81       |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |28     |28       |=          |
++-----------+-------+---------+-----------+
+|error      |1      |1        |=          |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++-------------------+-------+--------+---------+-----------+
+|module             |error  |warning |refactor |convention |
++===================+=======+========+=========+===========+
+|httpbin.helpers    |100.00 |42.86   |0.00     |32.10      |
++-------------------+-------+--------+---------+-----------+
+|httpbin.core       |0.00   |50.00   |0.00     |56.79      |
++-------------------+-------+--------+---------+-----------+
+|httpbin            |0.00   |7.14    |0.00     |1.23       |
++-------------------+-------+--------+---------+-----------+
+|httpbin.filters    |0.00   |0.00    |0.00     |6.17       |
++-------------------+-------+--------+---------+-----------+
+|httpbin.utils      |0.00   |0.00    |0.00     |2.47       |
++-------------------+-------+--------+---------+-----------+
+|httpbin.structures |0.00   |0.00    |0.00     |1.23       |
++-------------------+-------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------------------+------------+
+|message id                    |occurrences |
++==============================+============+
+|invalid-name                  |35          |
++------------------------------+------------+
+|missing-docstring             |19          |
++------------------------------+------------+
+|import-error                  |10          |
++------------------------------+------------+
+|bad-continuation              |10          |
++------------------------------+------------+
+|redefined-outer-name          |9           |
++------------------------------+------------+
+|line-too-long                 |7           |
++------------------------------+------------+
+|bad-whitespace                |5           |
++------------------------------+------------+
+|superfluous-parens            |4           |
++------------------------------+------------+
+|relative-import               |4           |
++------------------------------+------------+
+|unused-variable               |3           |
++------------------------------+------------+
+|bare-except                   |3           |
++------------------------------+------------+
+|anomalous-backslash-in-string |3           |
++------------------------------+------------+
+|redefined-builtin             |2           |
++------------------------------+------------+
+|wildcard-import               |1           |
++------------------------------+------------+
+|unused-import                 |1           |
++------------------------------+------------+
+|unused-argument               |1           |
++------------------------------+------------+
+|trailing-whitespace           |1           |
++------------------------------+------------+
+|no-value-for-parameter        |1           |
++------------------------------+------------+
+|fatal                         |1           |
++------------------------------+------------+
+|bad-builtin                   |1           |
++------------------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 8.05/10 (previous run: 8.05/10, +0.00)
+
