@@ -12,7 +12,7 @@ do
         fi
     fi
     conventions=${temp:1:10}
-    conv=20 # counts of  conventions
+    conv=200 # counts of  conventions
     if [ "$conventions" == "convention" ];then
        if [  "${temp:13:3}" -gt "$conv" ]; then
           echo "Static analysis convetion violation is higher than " $conv "."
